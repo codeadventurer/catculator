@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import CatFact from "./components/Catfact";
+import Calculator from "./components/Calculator";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <div className="heading">
+          <h1>Catculator</h1>
+          <img
+            src="/images/undraw_chilling_8tii.svg"
+            alt="undraw_chilling"
+          />{" "}
+        </div>
+        <div className="cat-fact">
+          <CatFact />
+        </div>
+        <div className="calc">
+          <Calculator />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
