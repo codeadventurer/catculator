@@ -57,3 +57,5 @@ export class Catfact extends Component {
     );
   }
 }
+
+export default Catfact;

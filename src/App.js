@@ -17,9 +17,8 @@ class App extends Component {
         <div className="cat-fact">
           <CatFact />
         </div>
-        <div className="calc">
-          <Calculator />
-        </div>
+
+        <Calculator />
       </div>
     );
   }
