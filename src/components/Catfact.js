@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-export class Catfact extends Component {
-  state = {
-    // loading: false,
-    facts: [],
-    randomFact:
-      "The frequency of a domestic cat's purr is the same at which muscles and bones repair themselves."
-  };
+class Catfact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      // loading: false,
+      facts: [],
+      randomFact: ""
+    };
+  }
 
   getFacts = () => {
     // this.setState({ loading: true });
@@ -34,7 +36,10 @@ export class Catfact extends Component {
     this.getFacts();
   }
 
-  // handleClick(event) {
+  handleClick(event) {
+    event.preventDefault();
+    console.log(this.state.facts);
+  }
   //   event.preventDefault();
   //   console.log("works!");
   //   let random = Math.floor(Math.random() * this.state.facts.length);
@@ -52,7 +57,7 @@ export class Catfact extends Component {
     return (
       <div>
         <p className="fact-text">{fact}</p>
-        {/* <button onClick={this.handleClick}>New cat fact</button> */}
+        <button onClick={this.handleClick}>New cat fact</button>
       </div>
     );
   }

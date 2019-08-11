@@ -20,6 +20,13 @@ h1 {
   align-items: center;
 }
 
+.main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .heading img {
   width: 300px;
   height: auto;
@@ -37,7 +44,6 @@ h1 {
 .footer {
   background-color: rgb(80, 140, 237);
   color: white;
-
   height: 3vh;
   display: flex;
   justify-content: center;
@@ -66,18 +72,25 @@ h1 {
     font-size: 2.4em;
   }
   .heading {
-    flex-direction: row;
     padding: 50px;
   }
 
   .heading img {
-    width: 500px;
+    width: 600px;
     height: auto;
     margin-bottom: 0 50px;
   }
 
+  .main {
+    flex-direction: row;
+    justify-content: center;
+    padding: 100px;
+  }
+
   .cat-fact {
-    margin: 50px;
+    margin: 100px;
+    width: 40vw;
+    max-width: 500px;
   }
 
   .fact-text {

@@ -19,15 +19,6 @@ class Calculator extends Component {
     });
   };
 
-  addZeroToInput = val => {
-    if (this.state.input !== "") {
-      this.setState({
-        input: this.state.input + val,
-        currentNumber: this.state.input + val
-      });
-    }
-  };
-
   addDecimal = val => {
     if (this.state.input.indexOf(".") === -1) {
       this.setState({
@@ -131,7 +122,7 @@ class Calculator extends Component {
 
           <div className="row">
             <Button handleClick={this.addDecimal}>.</Button>
-            <Button handleClick={this.addZeroToInput}>0</Button>
+            <Button handleClick={this.addToInput}>0</Button>
             <Button handleClick={this.evaluate}>=</Button>
             <Button handleClick={this.substract}>-</Button>
           </div>

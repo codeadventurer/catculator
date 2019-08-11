@@ -10,12 +10,14 @@ class App extends Component {
         <h1>CATCULATOR</h1>
         <div className="heading">
           <img src="/images/undraw_chilling_8tii.svg" alt="undraw_chilling" />{" "}
+        </div>
+
+        <div className="main">
           <div className="cat-fact">
             <CatFact />
           </div>
+          <Calculator />
         </div>
-
-        <Calculator />
 
         <div className="footer">
           <div className="footer-text">
