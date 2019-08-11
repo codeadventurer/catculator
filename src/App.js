@@ -4,8 +4,24 @@ import CatFact from "./components/Catfact";
 import Calculator from "./components/Calculator";
 
 class App extends Component {
-  check = () => {
-    console.log("click!!!");
+  facts = [];
+
+  state = {
+    randomFact:
+      "A cat's brain is 90% similar to a human's — more similar than to a dog's."
+  };
+
+  refreshFact = () => {
+    const facts = this.facts.map(item => item.text);
+    let random = Math.floor(Math.random() * facts.length);
+
+    this.setState({
+      randomFact: facts[random]
+    });
+  };
+
+  fillFacts = facts => {
+    this.facts = facts;
   };
 
   render() {
@@ -18,9 +34,13 @@ class App extends Component {
 
         <div className="main">
           <div className="cat-fact">
-            <CatFact />
+            <CatFact
+              fillFacts={facts => this.fillFacts(facts)}
+              randomFact={this.state.randomFact}
+              refreshFact={this.refreshFact}
+            />
           </div>
-          <Calculator handleAnotherClick={this.check} />
+          <Calculator refreshFact={this.refreshFact} />
         </div>
 
         <div className="footer">

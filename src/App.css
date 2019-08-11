@@ -34,6 +34,9 @@ h1 {
 
 .cat-fact {
   margin: 20px;
+  height: 200px;
+  display: flex;
+  align-items: center;
 }
 
 .fact-text {
@@ -84,13 +87,14 @@ h1 {
   .main {
     flex-direction: row;
     justify-content: center;
-    padding: 100px;
+    padding: 50px 100px;
   }
 
   .cat-fact {
-    margin: 100px;
+    margin: 0 100px 0 0;
     width: 40vw;
     max-width: 500px;
+    height: 450px;
   }
 
   .fact-text {

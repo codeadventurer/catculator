@@ -5,10 +5,7 @@ class Catfact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: false,
-      facts: [],
-      randomFact:
-        "A cat's brain is 90% similar to a human's — more similar than to a dog's."
+      loading: false
     };
   }
 
@@ -22,9 +19,9 @@ class Catfact extends Component {
       .then(response => {
         const facts = response.data.all;
         this.setState({
-          loading: false,
-          facts: facts
+          loading: false
         });
+        this.props.fillFacts(facts);
       })
       .catch(err => {
         console.log(err);
@@ -36,21 +33,16 @@ class Catfact extends Component {
   }
 
   handleClick = () => {
-    const facts = this.state.facts.map(item => item.text);
-
-    let random = Math.floor(Math.random() * facts.length);
-    this.setState({
-      randomFact: facts[random]
-    });
+    this.props.refreshFact();
   };
 
   render() {
-    const text = this.state.loading ? "loading..." : this.state.randomFact;
+    const text = this.state.loading ? "loading..." : this.props.randomFact;
 
     return (
       <div>
-        <p className="fact-text">{text} </p>
-        <button onClick={this.handleClick}>New cat fact</button>
+        <p className="fact-text">{text}</p>
+        {/* <button onClick={this.handleClick}>New cat fact</button> */}
       </div>
     );
   }
