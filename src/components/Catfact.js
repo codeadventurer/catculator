@@ -2,12 +2,9 @@ import React, { Component } from "react";
 import axios from "axios";
 
 class Catfact extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: false
-    };
-  }
+  state = {
+    loading: false
+  };
 
   getFacts = () => {
     this.setState({ loading: true });
@@ -42,7 +39,6 @@ class Catfact extends Component {
     return (
       <div>
         <p className="fact-text">{text}</p>
-        {/* <button onClick={this.handleClick}>New cat fact</button> */}
       </div>
     );
   }
