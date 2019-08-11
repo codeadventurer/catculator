@@ -49,7 +49,7 @@ class Catfact extends Component {
 
     return (
       <div>
-        <p className="fact-text">{text}</p>
+        <p className="fact-text">{text} </p>
         <button onClick={this.handleClick}>New cat fact</button>
       </div>
     );

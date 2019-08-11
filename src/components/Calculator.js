@@ -65,6 +65,7 @@ class Calculator extends Component {
   };
 
   evaluate = () => {
+    this.props.handleAnotherClick();
     if (this.state.operator === "plus") {
       this.setState({
         input:

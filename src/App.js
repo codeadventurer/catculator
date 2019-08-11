@@ -4,6 +4,10 @@ import CatFact from "./components/Catfact";
 import Calculator from "./components/Calculator";
 
 class App extends Component {
+  check = () => {
+    console.log("click!!!");
+  };
+
   render() {
     return (
       <div className="App">
@@ -16,7 +20,7 @@ class App extends Component {
           <div className="cat-fact">
             <CatFact />
           </div>
-          <Calculator />
+          <Calculator handleAnotherClick={this.check} />
         </div>
 
         <div className="footer">
