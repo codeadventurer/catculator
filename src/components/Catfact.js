@@ -51,7 +51,7 @@ export class Catfact extends Component {
     const fact = facts[random];
     return (
       <div>
-        <h2>{fact}</h2>
+        <p className="fact-text">{fact}</p>
         {/* <button onClick={this.handleClick}>New cat fact</button> */}
       </div>
     );

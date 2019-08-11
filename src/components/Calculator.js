@@ -5,30 +5,35 @@ import ClearButton from "./ClearButton";
 import "./Calculator.css";
 
 class Calculator extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      input: "",
-      previousNumber: "",
-      currentNumber: "",
-      operator: ""
-    };
-  }
+  state = {
+    input: "",
+    previousNumber: "",
+    currentNumber: "",
+    operator: ""
+  };
 
   addToInput = val => {
-    this.setState({ input: this.state.input + val });
+    this.setState({
+      input: this.state.input + val,
+      currentNumber: this.state.input + val
+    });
   };
 
   addZeroToInput = val => {
     if (this.state.input !== "") {
-      this.setState({ input: this.state.input + val });
+      this.setState({
+        input: this.state.input + val,
+        currentNumber: this.state.input + val
+      });
     }
   };
 
   addDecimal = val => {
     if (this.state.input.indexOf(".") === -1) {
-      this.setState({ input: this.state.input + val });
+      this.setState({
+        input: this.state.input + val,
+        currentNumber: this.state.input + val
+      });
     }
   };
 
@@ -69,8 +74,6 @@ class Calculator extends Component {
   };
 
   evaluate = () => {
-    //this.setState({ currentNumber: this.state.input });
-    this.state.currentNumber = this.state.input;
     if (this.state.operator === "plus") {
       this.setState({
         input:

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin: 20px 0;
 }
 
 .calc-wrapper {
@@ -30,6 +30,10 @@
   outline: 1px solid #888;
 }
 
+.button:active {
+  box-shadow: inset 0px 0px 80px 0px rgba(0, 0, 0, 0.25);
+}
+
 .operator {
   background-color: rgb(109, 105, 251);
   color: white;
@@ -39,15 +43,15 @@
 
 .input {
   display: flex;
-  height: 3em;
+  height: 2em;
   flex: 1;
   background-color: rgb(67, 209, 160);
   outline: 1px solid #888;
   color: white;
   justify-content: flex-end;
-  padding: 0.5em;
-  font-weight: bold;
-  font-size: 1.4em;
+  padding-right: 0.3em;
+  font-weight: lighter;
+  font-size: 2.8em;
   align-items: center;
 }
 
@@ -65,4 +69,8 @@
   font-weight: lighter;
   font-size: 1.4em;
   align-items: center;
+}
+
+.clear-btn:active {
+  box-shadow: inset 0px 0px 80px 0px rgba(0, 0, 0, 0.25);
 }

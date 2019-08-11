@@ -7,18 +7,26 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>CATCULATOR</h1>
         <div className="heading">
-          <h1>Catculator</h1>
-          <img
-            src="/images/undraw_chilling_8tii.svg"
-            alt="undraw_chilling"
-          />{" "}
-        </div>
-        <div className="cat-fact">
-          <CatFact />
+          <img src="/images/undraw_chilling_8tii.svg" alt="undraw_chilling" />{" "}
+          <div className="cat-fact">
+            <CatFact />
+          </div>
         </div>
 
         <Calculator />
+
+        <div className="footer">
+          <div className="footer-text">
+            Made by{" "}
+            <a href="https://www.linkedin.com/in/adontcova/">Anna Dontcova</a>.
+            The illustration is from <a href="https://undraw.co/">undraw</a>.
+            Favicon made by{" "}
+            <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from{" "}
+            <a href="https://www.flaticon.com/">flaticon</a> © 2019
+          </div>
+        </div>
       </div>
     );
   }
