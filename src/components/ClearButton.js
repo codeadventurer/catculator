@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 
-export class ClearButton extends Component {
+class ClearButton extends Component {
   render() {
-    return <div className="clear-btn">{this.props.children}</div>;
+    return (
+      <div className="clear-btn" onClick={() => this.props.handleClear()}>
+        {this.props.children}
+      </div>
+    );
   }
 }
 
